@@ -1,0 +1,158 @@
+[
+    {
+      "_id": "1",
+      "brand_name": "Sailor",
+      "rating": 4.5,
+      "description": "Your one-stop shop for the latest tech gadgets and accessories.",
+      "brand_logo": "https://i.ibb.co.com/MsJDXSJ/logo-sailor.png",
+      "coupons": [
+        {
+          "coupon_code": "SAVE20",
+          "description": "Get 20% off on your first purchase.",
+          "expiry_date": "2024-12-31",
+          "condition": "Minimum purchase of $100 required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIP",
+          "description": "Free shipping on all orders over $50.",
+          "expiry_date": "2024-11-30",
+          "condition": "Applies to standard shipping only.",
+          "coupon_type": "Shipping"
+        }
+      ],
+      "shop_link": "https://techzone.com",
+      "category": "Electronics",
+      "isSaleOn": true
+    },
+    {
+      "_id": "2",
+      "brand_name": "Aarong",
+      "rating": 4.2,
+      "description": "Trendy fashion and accessories for every occasion.",
+      "brand_logo": "https://i.ibb.co.com/q1fzwD8/Arong-logo.jpg",
+      "coupons": [
+        {
+          "coupon_code": "STYLE10",
+          "description": "10% off on all new arrivals.",
+          "expiry_date": "2025-01-15",
+          "condition": "Not valid on sale items.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BOGO50",
+          "description": "Buy one, get one 50% off.",
+          "expiry_date": "2024-12-15",
+          "condition": "Applicable to selected items only.",
+          "coupon_type": "BOGO"
+        }
+      ],
+      "shop_link": "https://fashionhub.com",
+      "category": "Fashion",
+      "isSaleOn": false
+    },
+    {
+      "_id": "3",
+      "brand_name": "Anjan’s",
+      "rating": 4.7,
+      "description": "Fresh groceries delivered to your doorstep.",
+      "brand_logo": "https://i.ibb.co.com/PmXC9Lg/Anjans-logo.jpg",
+      "coupons": [
+        {
+          "coupon_code": "FRESH15",
+          "description": "15% off on all fresh produce.",
+          "expiry_date": "2024-11-30",
+          "condition": "Valid for new users only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "SAVE5",
+          "description": "Save $5 on your order above $50.",
+          "expiry_date": "2025-03-31",
+          "condition": "Minimum spend of $50 required.",
+          "coupon_type": "Cashback"
+        }
+      ],
+      "shop_link": "https://grocerymart.com",
+      "category": "Groceries",
+      "isSaleOn": true
+    },
+    {
+      "_id": "4",
+      "brand_name": "Kay Kraft",
+      "rating": 4.8,
+      "description": "The best collection of books and novels online.",
+      "brand_logo": "https://i.ibb.co.com/gPD7wSz/keykraft-logo.png",
+      "coupons": [
+        {
+          "coupon_code": "READMORE",
+          "description": "Get 25% off on all fiction books.",
+          "expiry_date": "2024-12-25",
+          "condition": "Only valid on fiction category.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BOOKLOVER",
+          "description": "Free bookmark with every order.",
+          "expiry_date": "2025-01-01",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Gift"
+        }
+      ],
+      "shop_link": "https://bookworld.com",
+      "category": "Books",
+      "isSaleOn": false
+    },
+    {
+      "_id": "5",
+      "brand_name": "Yellow",
+      "rating": 4.6,
+      "description": "Top-quality fitness gear and health supplements.",
+      "brand_logo": "https://i.ibb.co.com/T13dS7R/yellow-logo.png",
+      "coupons": [
+        {
+          "coupon_code": "FIT10",
+          "description": "10% off on all protein supplements.",
+          "expiry_date": "2024-11-30",
+          "condition": "Excludes clearance items.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "GYM20",
+          "description": "20% off on gym apparel.",
+          "expiry_date": "2024-12-31",
+          "condition": "Valid on orders over $100.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://fitlife.com",
+      "category": "Fitness",
+      "isSaleOn": true
+    },
+    {
+      "_id": "6",
+      "brand_name": "Infinity Mega Mall",
+      "rating": 4.3,
+      "description": "Beauty products for your daily care routine.",
+      "brand_logo": "https://i.ibb.co.com/7khQQZr/infinity-logo.jpg",
+      "coupons": [
+        {
+          "coupon_code": "GLOW15",
+          "description": "15% off on skincare products.",
+          "expiry_date": "2024-11-25",
+          "condition": "Minimum purchase of $75 required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "MAKEUP20",
+          "description": "20% off on all makeup items.",
+          "expiry_date": "2025-02-28",
+          "condition": "Excludes sale items.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://beautyplus.com",
+      "category": "Beauty",
+      "isSaleOn": false
+    }
+  ]
