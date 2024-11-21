@@ -1,17 +1,17 @@
-import React from 'react';
-import Register from '../Pages/Register';
-import Login from '../Pages/Login';
+
+// import React, { useEffect } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const Home = () => {
-  
+    // useEffect(() => {
+    //     AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
+    //   }, []);
     return (
         <div>
-            {/* <h1 className="text-4xl font-bold">Welcome to the Home Page</h1>
-            <p className="mt-4 text-gray-600">
-                Navigate to Register or Login using the links.
-            </p> */}
-            {/* <Login></Login>
-            <Register></Register> */}
+            <section className="banner" data-aos="fade-up">
+        <h1 className="text-4xl font-bold text-center mt-10">Welcome to Coupon Collector</h1>
+      </section>
         </div>
     );
 };

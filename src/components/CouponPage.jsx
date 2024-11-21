@@ -11,7 +11,7 @@ const CouponPage = () => {
   useEffect(() => {
     const fetchBrandDetails = async () => {
       try {
-        const response = await fetch('/coupons.json'); // Adjusted path
+        const response = await fetch('/coupons.json');
         const data = await response.json();
         setBrand(data);
       } catch (error) {
@@ -35,7 +35,6 @@ const CouponPage = () => {
     <div className="container mx-auto p-4">
       <ToastContainer />
 
-      {/* Brand Details */}
       <div className="flex items-center gap-4 mb-6">
         <img
           src={brand.brand_logo}

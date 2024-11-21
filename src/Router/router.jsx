@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../Layout/HomeLayout";
 import Brands from "../components/Brands";
-import Home from "../components/Home";
+
 import MyProfile from "../components/MyProfile";
 import AboutDev from "../components/AboutDev";
 import BrandsShop from "../components/BrandsShop";
@@ -13,6 +13,9 @@ import AuthLayout from "../Layout/AuthLayout";
 import CouponPage from "../components/CouponPage";
 import EditProfile from "../components/EditProfile";
 import ForgotPassword from "../Pages/ForgotPassword";
+import Home from "../components/Home";
+
+
 
 
 const router = createBrowserRouter([
@@ -22,7 +25,7 @@ const router = createBrowserRouter([
       children:[
         {
             path:"/",
-            element: <Home></Home>,
+            element:<Home></Home>,
         },
         {
             path:"/brands",
