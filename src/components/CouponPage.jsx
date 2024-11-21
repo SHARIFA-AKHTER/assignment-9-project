@@ -9,7 +9,6 @@ const CouponPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch data from coupons.json
     const fetchBrandDetails = async () => {
       try {
         const response = await fetch('/coupons.json'); // Adjusted path
@@ -52,7 +51,6 @@ const CouponPage = () => {
         </div>
       </div>
 
-      {/* Coupons Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {brand.coupons.map((coupon) => (
           <div
@@ -65,14 +63,12 @@ const CouponPage = () => {
             <p className="text-sm text-gray-500">{coupon.condition}</p>
 
             <div className="mt-4 flex gap-4">
-              {/* Copy Code Button */}
               <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopy}>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                   Copy Code
                 </button>
               </CopyToClipboard>
 
-              {/* Use Now Button */}
               <button
                 className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
                 onClick={() => window.open(brand.shop_link, '_blank')}
