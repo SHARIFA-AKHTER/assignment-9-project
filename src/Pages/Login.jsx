@@ -10,7 +10,7 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Simulate login process
+      
         if (email === 'user@example.com' && password === 'Password123') {
             navigate('/');
         } else {
@@ -24,7 +24,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen flex justify-center items-center">
+        <div className="mt-20 flex justify-center items-center">
             <div className="card w-full max-w-lg bg-base-100 shadow-xl p-10">
                 <h2 className="text-2xl font-semibold text-center mb-4">Login to Your Account</h2>
                 <form onSubmit={handleLogin}>

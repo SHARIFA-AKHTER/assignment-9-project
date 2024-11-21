@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="flex justify-center items-center m-10">
+        <div className="min-h-screen flex justify-center items-center">
             <div className="card w-full max-w-lg bg-base-100 shadow-xl p-10">
                 <h2 className="text-2xl font-semibold text-center mb-4">Reset Your Password</h2>
                 <form>
