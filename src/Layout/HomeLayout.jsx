@@ -9,6 +9,7 @@ import AllBrands from '../components/AllBrands';
 import CouponPage from '../components/CouponPage';
 import MyProfile from '../components/MyProfile';
 import EditProfile from '../components/EditProfile';
+import UpdateProfile from '../components/UpdateProfile';
 
 
 
@@ -27,7 +28,7 @@ const HomeLayout = () => {
          <CouponPage></CouponPage>
             <MyProfile></MyProfile>
             <EditProfile></EditProfile>
-        
+          <UpdateProfile></UpdateProfile>
           </main>
 
           <Outlet></Outlet>

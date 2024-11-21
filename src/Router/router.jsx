@@ -12,6 +12,7 @@ import Login from "../Pages/Login";
 import AuthLayout from "../Layout/AuthLayout";
 import CouponPage from "../components/CouponPage";
 import EditProfile from "../components/EditProfile";
+// import UpdateProfile from "../components/UpdateProfile";
 
 
 const router = createBrowserRouter([
@@ -42,10 +43,15 @@ const router = createBrowserRouter([
             then(res => res.json().then(data => data.find
                 (brand => brand._id === params.id)))
         },
+      
         {
             path:"/my-profile",
             element: <MyProfile></MyProfile>,
         },
+        // {
+        //     path:"/update-profile",
+        //     element: <UpdateProfile></UpdateProfile>
+        // },
         {
             path:"/edit-profile",
             element:<EditProfile></EditProfile>
@@ -72,6 +78,7 @@ const router = createBrowserRouter([
                 path:"/auth/login",
                 element:<Login></Login>,
              },
+            
          {
             path:"/auth/register",
             element:<Register></Register>,
