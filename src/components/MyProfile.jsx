@@ -24,7 +24,6 @@ const MyProfile = () => {
     };
 
     const handleSave = () => {
-        // Simple validation for empty fields
         if (!updatedUser.name || !updatedUser.email || !updatedUser.picture) {
             setError('All fields are required!');
             return;
@@ -41,12 +40,12 @@ const MyProfile = () => {
 
     return (
         <div className="bg-gray-100 flex flex-col items-center py-8 px-4 md:px-8">
-            {/* Cover Section */}
+      
             <div className="w-full bg-blue-600 text-white py-8 rounded-lg text-center mb-8">
                 <h1 className="text-2xl md:text-3xl font-bold">Welcome, {user.name}!</h1>
             </div>
 
-            {/* Profile Card */}
+          
             <div className="bg-white shadow-lg rounded-lg p-6  w-full">
                 <div className="flex flex-col items-center space-y-4">
                     <img

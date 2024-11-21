@@ -12,7 +12,7 @@ import Login from "../Pages/Login";
 import AuthLayout from "../Layout/AuthLayout";
 import CouponPage from "../components/CouponPage";
 import EditProfile from "../components/EditProfile";
-// import UpdateProfile from "../components/UpdateProfile";
+import ForgotPassword from "../Pages/ForgotPassword";
 
 
 const router = createBrowserRouter([
@@ -78,10 +78,13 @@ const router = createBrowserRouter([
                 path:"/auth/login",
                 element:<Login></Login>,
              },
-            
+             {
+                path:"/auth/forgot-password",
+                element:<Login></Login>,
+             },
          {
             path:"/auth/register",
-            element:<Register></Register>,
+            element:<ForgotPassword></ForgotPassword>,
           },
         ]
     },
