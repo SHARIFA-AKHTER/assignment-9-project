@@ -8,12 +8,10 @@ const AllBrands = ({ isLoggedIn }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
 
-    // Filter brands based on search input
     const filteredBrands = brandsData.filter((brand) =>
         brand.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Handle "View Coupons" button click
     const handleViewCoupons = (brandId) => {
         if (isLoggedIn) {
             navigate(`/brand/${brandId}`);
@@ -23,23 +21,24 @@ const AllBrands = ({ isLoggedIn }) => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            {/* Page Title */}
+        <div className="container mx-auto px-4 py-8 ">
             <h1 className="text-3xl font-bold text-center mb-8">All Brands</h1>
 
-            {/* Search Bar */}
-            <div className="mb-8">
+            <div className="mb-8 ">
                 <input
                     type="text"
                     placeholder="Search for brands..."
-                    className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-3 border border-gray-300
+                     rounded-lg shadow-sm focus:outline-none 
+                     focus:ring-2 focus:ring-blue-500"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </div>
 
             {/* Brands List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2
+             lg:grid-cols-3 gap-6 ">
                 {filteredBrands.map((brand) => (
                     <div
                         key={brand.id}
@@ -65,7 +64,8 @@ const AllBrands = ({ isLoggedIn }) => {
                         <div className="flex flex-col items-center">
                             {/* Bouncing "Sale is On" Text */}
                             {brand.isSaleOn && (
-                                <p className="text-red-500 animate-bounce mb-2">Sale is On!</p>
+                                <p className="text-red-500 
+                                animate-bounce mb-2">Sale is On!</p>
                             )}
                             <button
                                 onClick={() => handleViewCoupons(brand.id)}

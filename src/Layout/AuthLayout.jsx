@@ -1,6 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
+import CouponPage from '../components/CouponPage';
+import MyProfile from '../components/MyProfile';
+import EditProfile from '../components/EditProfile';
 
 const AuthLayout = () => {
     return (
@@ -8,8 +11,9 @@ const AuthLayout = () => {
            <Header>
 
            </Header>
-     
             <Outlet></Outlet>
+          
+        
         </div>
     );
 };

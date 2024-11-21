@@ -12,15 +12,15 @@ const Login = () => {
         e.preventDefault();
         // Simulate login process
         if (email === 'user@example.com' && password === 'Password123') {
-            navigate('/'); // Redirect to Home or desired route
+            navigate('/');
         } else {
             setError('Invalid email or password.');
         }
     };
 
     const handleGoogleLogin = () => {
-        // Simulate Google authentication
-        navigate('/'); // Redirect to Home or desired route
+       
+        navigate('/'); 
     };
 
     return (

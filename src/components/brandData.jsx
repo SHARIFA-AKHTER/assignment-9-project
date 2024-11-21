@@ -1,5 +1,11 @@
 const brandsData = [
-    { id: 1, name: 'Sailor', logo: 'https://i.ibb.co/MsJDXSJ/logo-sailor.png', description: 'Fashion brand offering premium quality clothing.', totalCoupons: 5, isSaleOn: true },
+    { id: 1,
+         name: 'Sailor',
+          logo: 'https://i.ibb.co/MsJDXSJ/logo-sailor.png',
+           description: 'Fashion brand offering premium quality clothing.',
+            totalCoupons: 5,
+            rating: 4.5,
+             isSaleOn: true },
     { id: 2, name: 'Aarong', logo: 'https://i.ibb.co/q1fzwD8/Arong-logo.jpg', description: 'Popular lifestyle and clothing brand.', totalCoupons: 3, isSaleOn: false },
     { id: 3, name: 'Anjan’s', logo: 'https://i.ibb.co/PmXC9Lg/Anjans-logo.jpg', description: 'Handcrafted traditional attire and accessories.', totalCoupons: 10, isSaleOn: true },
     { id: 4, name: 'Kay Kraft', logo: 'https://i.ibb.co/gPD7wSz/keykraft-logo.png', description: 'Innovative fashion brand with a focus on craftsmanship.', totalCoupons: 10, isSaleOn: false },
