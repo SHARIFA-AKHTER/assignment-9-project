@@ -6,7 +6,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState({
-        name: 'Samiha',
+        name: 'Samiha Rahman',
         email: 'samiha@example.com',
         picture: 'https://i.ibb.co/NnxcbvH/Samiha-11.jpg',
     });
@@ -17,7 +17,7 @@ const Header = () => {
 
     const handleLogout = () => {
         setIsLoggedIn(false);
-        setUser(null);  // Optional: Reset user state to null
+        setUser(null);  
     };
 
     const handleLogin = () => {
@@ -34,7 +34,6 @@ const Header = () => {
                 </Link>
             </div>
 
-            {/* Mobile Menu Toggle */}
             <button
                 className="md:hidden text-white"
                 onClick={toggleMenu}
@@ -42,7 +41,7 @@ const Header = () => {
                 ☰
             </button>
         
-            {/* Navigation */}
+        
             <nav
                 className={`${isMenuOpen ? "block" : "hidden"} 
                     md:flex md:items-center md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-gray-800 md:bg-transparent p-4 md:p-0 z-50`}
@@ -67,7 +66,6 @@ const Header = () => {
                 </Link>
             </nav>
         
-            {/* Authentication Section */}
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-x-4 md:space-y-0">
                 {isLoggedIn ? (
                     <div className="flex items-center space-x-3">

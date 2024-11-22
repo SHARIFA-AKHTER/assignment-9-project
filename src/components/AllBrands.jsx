@@ -60,9 +60,9 @@ const AllBrands = ({ isLoggedIn }) => {
                             <p className="text-gray-600">{brand.description}</p>
                         </div>
 
-                        {/* Action Buttons */}
+                   
                         <div className="flex flex-col items-center">
-                            {/* Bouncing "Sale is On" Text */}
+                           
                             {brand.isSaleOn && (
                                 <p className="text-red-500 
                                 animate-bounce mb-2">Sale is On!</p>

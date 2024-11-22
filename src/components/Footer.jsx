@@ -1,9 +1,12 @@
 
 import React from "react";
-import { FaPercent } from "react-icons/fa"; // Import the percentage icon
+import { FaPercent } from "react-icons/fa"; 
 
 const Footer = () => {
   return (
+
+    // Footer 
+    
     <footer className="footer bg-neutral text-neutral-content p-10">
       <nav>
         <h6 className="footer-title text-2xl flex items-center gap-2">
