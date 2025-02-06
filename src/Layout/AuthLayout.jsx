@@ -10,7 +10,6 @@ const AuthLayout = () => {
            </Header>     
         
             <Outlet></Outlet>
-            <ForgotPassword></ForgotPassword>
         
         </div>
     );

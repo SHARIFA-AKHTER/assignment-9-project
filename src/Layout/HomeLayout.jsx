@@ -6,7 +6,6 @@ import Banner from '../components/Banner';
 import TopBrands from '../components/TopBrands';
 import BrandOnSale from '../components/BrandOnSale';
 import AllBrands from '../components/AllBrands';
-import CouponPage from '../components/CouponPage';
 import MyProfile from '../components/MyProfile';
 import EditProfile from '../components/EditProfile';
 import UpdateProfile from '../components/UpdateProfile';
@@ -25,9 +24,7 @@ const HomeLayout = () => {
           <BrandOnSale></BrandOnSale> 
 
             <AllBrands></AllBrands>
-         <CouponPage></CouponPage>
-            <MyProfile></MyProfile>
-            <EditProfile></EditProfile>
+         
           <UpdateProfile></UpdateProfile>
           </main>
 

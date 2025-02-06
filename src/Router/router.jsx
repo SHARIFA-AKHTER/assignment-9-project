@@ -10,13 +10,9 @@ import AllBrands from "../components/AllBrands";
  import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import AuthLayout from "../Layout/AuthLayout";
-import CouponPage from "../components/CouponPage";
 import EditProfile from "../components/EditProfile";
 import ForgotPassword from "../Pages/ForgotPassword";
 import Home from "../components/Home";
-
-
-
 
 const router = createBrowserRouter([
     {
@@ -35,13 +31,6 @@ const router = createBrowserRouter([
         {
             path: "/brand/:id/shop",
             element: <BrandsShop></BrandsShop>,
-            loader: ({ params }) => fetch(`/cupons.json`).
-            then(res => res.json().then(data => data.find
-                (brand => brand._id === params.id)))
-        },
-        {
-            path: "/brand/:id/shop",
-            element: <CouponPage></CouponPage>,
             loader: ({ params }) => fetch(`/cupons.json`).
             then(res => res.json().then(data => data.find
                 (brand => brand._id === params.id)))

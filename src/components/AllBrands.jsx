@@ -36,7 +36,6 @@ const AllBrands = ({ isLoggedIn }) => {
                 />
             </div>
 
-            {/* Brands List */}
             <div className="grid grid-cols-1 sm:grid-cols-2
              lg:grid-cols-3 gap-6 ">
                 {filteredBrands.map((brand) => (
@@ -44,14 +43,12 @@ const AllBrands = ({ isLoggedIn }) => {
                         key={brand.id}
                         className="bg-white shadow-lg rounded-lg p-4 flex flex-col md:flex-row items-center gap-4 transition-transform duration-300 hover:scale-105"
                     >
-                        {/* Brand Logo */}
                         <img
                             src={brand.logo}
                             alt={brand.name}
                             className="h-20 w-20 object-contain"
                         />
 
-                        {/* Brand Info */}
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                                 <FaStar className="text-yellow-500" />
