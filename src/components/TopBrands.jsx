@@ -7,7 +7,6 @@ const TopBrands = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Fetch data from your API or use static data
         fetch('/cupons.json')
             .then((response) => response.json())
             .then((data) => {

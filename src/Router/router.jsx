@@ -8,7 +8,6 @@ import NotFound from "../components/NotFound";
  import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import AuthLayout from "../Layout/AuthLayout";
-import EditProfile from "../components/EditProfile";
 import ForgotPassword from "../Pages/ForgotPassword";
 import Home from "../components/Home";
 import PrivateRoute from "./PrivateRoute";
@@ -36,19 +35,12 @@ const router = createBrowserRouter([
             path:"/my-profile",
             element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>,
         },
-        
-        {
-            path:"/edit-profile",
-            element:<EditProfile></EditProfile>
-        },
+    
         {
             path:"/about-dev",
             element: <AboutDev></AboutDev>,
         },
-        // {
-        //     path:"/all-brands",
-        //     element:<AllBrands></AllBrands>
-        // },
+       
         
       ]
 

@@ -28,7 +28,7 @@ const MyProfile = () => {
       {/* User Info Card */}
       <div className="bg-white shadow-md rounded-xl p-6 mt-6 flex flex-col items-center w-full max-w-lg mx-auto">
         <img
-          src={user.photoURL || "https://via.placeholder.com/100"}
+          src={user.photoURL || "https://i.ibb.co.com/RpcR7FP2/Foodpanda-2.jpg"}
           alt="User"
           className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-blue-500"
         />
