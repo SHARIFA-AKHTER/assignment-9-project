@@ -1,158 +1,230 @@
 [
-    {
-      "_id": "1",
-      "brand_name": "Sailor",
-      "rating": 4.5,
-      "description": "Your one-stop shop for the latest tech gadgets and accessories.",
-      "brand_logo": "https://i.ibb.co.com/MsJDXSJ/logo-sailor.png",
-      "coupons": [
-        {
-          "coupon_code": "SAVE20",
-          "description": "Get 20% off on your first purchase.",
-          "expiry_date": "2024-12-31",
-          "condition": "Minimum purchase of $100 required.",
-          "coupon_type": "Discount"
-        },
-        {
-          "coupon_code": "FREESHIP",
-          "description": "Free shipping on all orders over $50.",
-          "expiry_date": "2024-11-30",
-          "condition": "Applies to standard shipping only.",
-          "coupon_type": "Shipping"
-        }
-      ],
-      "shop_link": "https://techzone.com",
-      "category": "Electronics",
-      "isSaleOn": true
-    },
-    {
-      "_id": "2",
-      "brand_name": "Aarong",
-      "rating": 4.2,
-      "description": "Trendy fashion and accessories for every occasion.",
-      "brand_logo": "https://i.ibb.co.com/q1fzwD8/Arong-logo.jpg",
-      "coupons": [
-        {
-          "coupon_code": "STYLE10",
-          "description": "10% off on all new arrivals.",
-          "expiry_date": "2025-01-15",
-          "condition": "Not valid on sale items.",
-          "coupon_type": "Discount"
-        },
-        {
-          "coupon_code": "BOGO50",
-          "description": "Buy one, get one 50% off.",
-          "expiry_date": "2024-12-15",
-          "condition": "Applicable to selected items only.",
-          "coupon_type": "BOGO"
-        }
-      ],
-      "shop_link": "https://fashionhub.com",
-      "category": "Fashion",
-      "isSaleOn": false
-    },
-    {
-      "_id": "3",
-      "brand_name": "Anjan’s",
-      "rating": 4.7,
-      "description": "Fresh groceries delivered to your doorstep.",
-      "brand_logo": "https://i.ibb.co.com/PmXC9Lg/Anjans-logo.jpg",
-      "coupons": [
-        {
-          "coupon_code": "FRESH15",
-          "description": "15% off on all fresh produce.",
-          "expiry_date": "2024-11-30",
-          "condition": "Valid for new users only.",
-          "coupon_type": "Discount"
-        },
-        {
-          "coupon_code": "SAVE5",
-          "description": "Save $5 on your order above $50.",
-          "expiry_date": "2025-03-31",
-          "condition": "Minimum spend of $50 required.",
-          "coupon_type": "Cashback"
-        }
-      ],
-      "shop_link": "https://grocerymart.com",
-      "category": "Groceries",
-      "isSaleOn": true
-    },
-    {
-      "_id": "4",
-      "brand_name": "Kay Kraft",
-      "rating": 4.8,
-      "description": "The best collection of books and novels online.",
-      "brand_logo": "https://i.ibb.co.com/gPD7wSz/keykraft-logo.png",
-      "coupons": [
-        {
-          "coupon_code": "READMORE",
-          "description": "Get 25% off on all fiction books.",
-          "expiry_date": "2024-12-25",
-          "condition": "Only valid on fiction category.",
-          "coupon_type": "Discount"
-        },
-        {
-          "coupon_code": "BOOKLOVER",
-          "description": "Free bookmark with every order.",
-          "expiry_date": "2025-01-01",
-          "condition": "No minimum purchase required.",
-          "coupon_type": "Gift"
-        }
-      ],
-      "shop_link": "https://bookworld.com",
-      "category": "Books",
-      "isSaleOn": false
-    },
-    {
-      "_id": "5",
-      "brand_name": "Yellow",
-      "rating": 4.6,
-      "description": "Top-quality fitness gear and health supplements.",
-      "brand_logo": "https://i.ibb.co.com/T13dS7R/yellow-logo.png",
-      "coupons": [
-        {
-          "coupon_code": "FIT10",
-          "description": "10% off on all protein supplements.",
-          "expiry_date": "2024-11-30",
-          "condition": "Excludes clearance items.",
-          "coupon_type": "Discount"
-        },
-        {
-          "coupon_code": "GYM20",
-          "description": "20% off on gym apparel.",
-          "expiry_date": "2024-12-31",
-          "condition": "Valid on orders over $100.",
-          "coupon_type": "Discount"
-        }
-      ],
-      "shop_link": "https://fitlife.com",
-      "category": "Fitness",
-      "isSaleOn": true
-    },
-    {
-      "_id": "6",
-      "brand_name": "Infinity Mega Mall",
-      "rating": 4.3,
-      "description": "Beauty products for your daily care routine.",
-      "brand_logo": "https://i.ibb.co.com/7khQQZr/infinity-logo.jpg",
-      "coupons": [
-        {
-          "coupon_code": "GLOW15",
-          "description": "15% off on skincare products.",
-          "expiry_date": "2024-11-25",
-          "condition": "Minimum purchase of $75 required.",
-          "coupon_type": "Discount"
-        },
-        {
-          "coupon_code": "MAKEUP20",
-          "description": "20% off on all makeup items.",
-          "expiry_date": "2025-02-28",
-          "condition": "Excludes sale items.",
-          "coupon_type": "Discount"
-        }
-      ],
-      "shop_link": "https://beautyplus.com",
-      "category": "Beauty",
-      "isSaleOn": false
-    }
-  ]
+  {
+    "_id": "1",
+    "brand_name": "Daraz",
+    "rating": 4.5,
+    "description": "Biggest online shopping platform in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/MxSYGP6V/Daraz-1.png",
+    "coupons": [
+      {
+        "coupon-code": "DARAZ10",
+        "description": "10% discount on all products",
+        "expiry-date": "2025-01-01",
+        "condition": "Minimum purchase 1000 BDT",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.daraz.com.bd",
+    "category": "E-commerce",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "brand_name": "Foodpanda",
+    "rating": 4.3,
+    "description": "Fast and reliable food delivery service.",
+    "brand_logo": "https://i.ibb.co.com/WpY4sdhj/Foodpanda-2.jpg",
+    "coupons": [
+      {
+        "coupon-code": "FP50",
+        "description": "50 BDT off on first order",
+        "expiry-date": "2025-03-01",
+        "condition": "Minimum order 300 BDT",
+        "cupon_type": "fixed"
+      }
+    ],
+    "shop-Link": "https://www.foodpanda.com.bd",
+    "category": "Food Delivery",
+    "isSaleOn": true
+  },
+  {
+    "_id": "3",
+    "brand_name": "Pathao",
+    "rating": 4.2,
+    "description": "Ride-sharing and parcel delivery service.",
+    "brand_logo": "https://i.ibb.co.com/wZRhVpJF/pathao-3.png",
+    "coupons": [
+      {
+        "coupon-code": "PATHAO20",
+        "description": "20% off on bike rides",
+        "expiry-date": "2025-02-15",
+        "condition": "Maximum discount 50 BDT",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.pathao.com",
+    "category": "Ride-sharing",
+    "isSaleOn": false
+  },
+  {
+    "_id": "4",
+    "brand_name": "Bikroy",
+    "rating": 4.0,
+    "description": "Largest online marketplace in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/NXF3v9j/Bikroy.png",
+    "coupons": [
+      {
+        "coupon-code": "BIKROYAD",
+        "description": "Free ad promotion for 7 days",
+        "expiry-date": "2025-04-10",
+        "condition": "For first-time sellers only",
+        "cupon_type": "other"
+      }
+    ],
+    "shop-Link": "https://www.bikroy.com",
+    "category": "Marketplace",
+    "isSaleOn": false
+  },
+  {
+    "_id": "5",
+    "brand_name": "Chaldal",
+    "rating": 4.6,
+    "description": "Online grocery shopping platform.",
+    "brand_logo": "https://i.ibb.co.com/wrLLGZY7/Chaldal-5.png",
+    "coupons": [
+      {
+        "coupon-code": "CHALDAL100",
+        "description": "100 BDT off on groceries",
+        "expiry-date": "2025-05-20",
+        "condition": "Minimum purchase 1500 BDT",
+        "cupon_type": "fixed"
+      }
+    ],
+    "shop-Link": "https://www.chaldal.com",
+    "category": "Grocery",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6",
+    "brand_name": "Grameenphone",
+    "rating": 4.7,
+    "description": "Leading telecom service provider in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/KzpY6pFT/Grammenphone.png",
+    "coupons": [
+      {
+        "coupon-code": "GP5GB",
+        "description": "5GB internet at 50% discount",
+        "expiry-date": "2025-06-30",
+        "condition": "Applicable for selected users",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.grameenphone.com",
+    "category": "Telecom",
+    "isSaleOn": true
+  },
+  {
+    "_id": "7",
+    "brand_name": "Robi",
+    "rating": 4.4,
+    "description": "One of the largest mobile network operators in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/ymFF4Qh0/robi-logo-7.png",
+    "coupons": [
+      {
+        "coupon-code": "ROBI50GB",
+        "description": "50GB internet at half price",
+        "expiry-date": "2025-07-15",
+        "condition": "Applicable for new users only",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.robi.com.bd",
+    "category": "Telecom",
+    "isSaleOn": true
+  },
+  {
+    "_id": "8",
+    "brand_name": "Uber",
+    "rating": 4.1,
+    "description": "Global ride-sharing service.",
+    "brand_logo": "https://i.ibb.co.com/3ymXQvC2/uber-8.png",
+    "coupons": [
+      {
+        "coupon-code": "UBER100",
+        "description": "100 BDT off on first ride",
+        "expiry-date": "2025-08-01",
+        "condition": "For new users only",
+        "cupon_type": "fixed"
+      }
+    ],
+    "shop-Link": "https://www.uber.com",
+    "category": "Ride-sharing",
+    "isSaleOn": false
+  },
+  {
+    "_id": "9",
+    "brand_name": "Shohoz",
+    "rating": 4.3,
+    "description": "Online ticket booking platform.",
+    "brand_logo": "https://i.ibb.co.com/YBb3gCR2/shohoz-9.png",
+    "coupons": [
+      {
+        "coupon-code": "SHOHOZBUS",
+        "description": "5% discount on bus tickets",
+        "expiry-date": "2025-09-10",
+        "condition": "Maximum discount 200 BDT",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.shohoz.com",
+    "category": "Ticket Booking",
+    "isSaleOn": true
+  },
+  {
+    "_id": "10",
+    "brand_name": "Pickaboo",
+    "rating": 4.5,
+    "description": "Trusted online gadget store.",
+    "brand_logo": "https://i.ibb.co.com/C5xptfqs/Pickaboo-11.png",
+    "coupons": [
+      {
+        "coupon-code": "PICKABOO20",
+        "description": "20% discount on electronics",
+        "expiry-date": "2025-10-05",
+        "condition": "Minimum purchase 5000 BDT",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.pickaboo.com",
+    "category": "E-commerce",
+    "isSaleOn": true
+  },
+  {
+    "_id": "11",
+    "brand_name": "Amazon",
+    "rating": 4.8,
+    "description": "World's largest online retailer.",
+    "brand_logo": "https://i.ibb.co.com/GfNG2m54/amajon-10.png",
+    "coupons": [
+      {
+        "coupon-code": "AMAZON15",
+        "description": "15% off on international shipping",
+        "expiry-date": "2025-11-15",
+        "condition": "For selected countries only",
+        "cupon_type": "percentage"
+      }
+    ],
+    "shop-Link": "https://www.amazon.com",
+    "category": "E-commerce",
+    "isSaleOn": false
+  },
+  {
+    "_id": "12",
+    "brand_name": "Alibaba",
+    "rating": 4.6,
+    "description": "Leading global wholesale marketplace.",
+    "brand_logo": "https://i.ibb.co.com/fYcVp88H/Alibaba-Logo-12.png",
+    "coupons": [
+      {
+        "coupon-code": "ALIBABA50",
+        "description": "50 USD discount on bulk orders",
+        "expiry-date": "2025-12-01",
+        "condition": "Minimum purchase 500 USD",
+        "cupon_type": "fixed"
+      }
+    ],
+    "shop-Link": "https://www.alibaba.com",
+    "category": "Wholesale",
+    "isSaleOn": true
+  }
+]

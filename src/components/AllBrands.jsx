@@ -1,81 +1,79 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaStar } from "react-icons/fa";
-import brandsData from "./brandData";
+// import React, { useState, useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
 
-const AllBrands = ({ isLoggedIn }) => {
-    const [searchTerm, setSearchTerm] = useState("");
-    const navigate = useNavigate();
+// const AllBrands = () => {
+//   const [brands, setBrands] = useState([]);
+//   const navigate = useNavigate();
 
-    const filteredBrands = brandsData.filter((brand) =>
-        brand.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+//   // Fake API Data Load
+//   useEffect(() => {
+//     fetch('/cupons.json') 
+//       .then((res) => res.json())
+//       .then((data) => setBrands(data));
+//   }, []);
 
-    const handleViewCoupons = (brandId) => {
-        if (isLoggedIn) {
-            navigate(`/brand/${brandId}`);
-        } else {
-            navigate("/login");
-        }
-    };
+//   // Check if user is logged in
+//   const isLoggedIn = localStorage.getItem('user');
 
+//   // Handle coupon button click
+//   const handleCouponClick = (brandId) => {
+//     if (isLoggedIn) {
+//       navigate(`/brands/${brandId}`); 
+//     } else {
+//       navigate("/login"); 
+//     }
+//   };
+
+//   return (
+//     <div className="max-w-6xl mx-auto p-4">
+//       <h2 className="text-3xl font-bold text-center mb-6">All Brands</h2>
+
+//       {/* Brands List - Responsive Grid */}
+//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//         {brands.map((brand) => (
+//           <div
+//             key={brand._id}
+//             className="bg-white shadow-md rounded-xl p-5 border flex flex-col items-center text-center"
+//           >
+//             {/* Brand Logo */}
+//             <img
+//               src={brand.brand_logo}
+//               alt={brand.brand_name}
+//               className="w-20 h-20 mb-3 object-contain"
+//             />
+//             <h3 className="text-xl font-semibold">{brand.brand_name}</h3>
+//             <p className="text-gray-600 text-sm">{brand.description}</p>
+
+//             {/* Rating with Star */}
+//             <div className="flex items-center mt-2 text-yellow-500">
+//               ⭐ {brand.rating}
+//             </div>
+
+//             {/* View Coupons Button */}
+//             <button
+//               onClick={() => handleCouponClick(brand._id)}
+//               className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-3"
+//             >
+//               View Coupons
+//             </button>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default AllBrands;
+import React from 'react';
+
+const AllBrands = () => {
     return (
-        <div className="container mx-auto px-4 py-8 ">
-            <h1 className="text-3xl font-bold text-center mb-8">All Brands</h1>
-
-            <div className="mb-8 ">
-                <input
-                    type="text"
-                    placeholder="Search for brands..."
-                    className="w-full p-3 border border-gray-300
-                     rounded-lg shadow-sm focus:outline-none 
-                     focus:ring-2 focus:ring-blue-500"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2
-             lg:grid-cols-3 gap-6 ">
-                {filteredBrands.map((brand) => (
-                    <div
-                        key={brand.id}
-                        className="bg-white shadow-lg rounded-lg p-4 flex flex-col md:flex-row items-center gap-4 transition-transform duration-300 hover:scale-105"
-                    >
-                        <img
-                            src={brand.logo}
-                            alt={brand.name}
-                            className="h-20 w-20 object-contain"
-                        />
-
-                        <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                                <FaStar className="text-yellow-500" />
-                                <h2 className="text-xl font-semibold">{brand.name}</h2>
-                            </div>
-                            <p className="text-gray-600">{brand.description}</p>
-                        </div>
-
-                   
-                        <div className="flex flex-col items-center">
-                           
-                            {brand.isSaleOn && (
-                                <p className="text-red-500 
-                                animate-bounce mb-2">Sale is On!</p>
-                            )}
-                            <button
-                                onClick={() => handleViewCoupons(brand.id)}
-                                className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors"
-                            >
-                                View Coupons
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </div>
+        <div>
+            
         </div>
     );
 };
 
 export default AllBrands;
+

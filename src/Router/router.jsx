@@ -4,15 +4,15 @@ import Brands from "../components/Brands";
 
 import MyProfile from "../components/MyProfile";
 import AboutDev from "../components/AboutDev";
-import BrandsShop from "../components/BrandsShop";
 import NotFound from "../components/NotFound";
-import AllBrands from "../components/AllBrands";
  import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import AuthLayout from "../Layout/AuthLayout";
 import EditProfile from "../components/EditProfile";
 import ForgotPassword from "../Pages/ForgotPassword";
 import Home from "../components/Home";
+import PrivateRoute from "./PrivateRoute";
+import CouponPage from "../components/CouponPage";
 
 const router = createBrowserRouter([
     {
@@ -26,19 +26,15 @@ const router = createBrowserRouter([
         {
             path:"/brands",
             element: <Brands></Brands>,
-            loader: () => fetch(`/cupons.json`)
         },
         {
-            path: "/brand/:id/shop",
-            element: <BrandsShop></BrandsShop>,
-            loader: ({ params }) => fetch(`/cupons.json`).
-            then(res => res.json().then(data => data.find
-                (brand => brand._id === params.id)))
+            path: "/brand/:id",
+            element: <PrivateRoute><CouponPage></CouponPage></PrivateRoute>,
         },
       
         {
             path:"/my-profile",
-            element: <MyProfile></MyProfile>,
+            element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>,
         },
         
         {
@@ -49,11 +45,10 @@ const router = createBrowserRouter([
             path:"/about-dev",
             element: <AboutDev></AboutDev>,
         },
-        {
-            path:"/all-brands",
-            element:<AllBrands></AllBrands>
-        },
-
+        // {
+        //     path:"/all-brands",
+        //     element:<AllBrands></AllBrands>
+        // },
         
       ]
 

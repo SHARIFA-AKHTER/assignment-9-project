@@ -1,122 +1,53 @@
 
-
-import React, { useState } from 'react';
+import { useState, useEffect } from "react";
+import UpdateProfile from "./UpdateProfile";
 
 const MyProfile = () => {
-    const [user, setUser] = useState({
-        name: 'Samiha',
-        email: 'samiha@example.com',
-        picture: 'https://i.ibb.co/NnxcbvH/Samiha-11.jpg',
-    });
+  const [user, setUser] = useState({});
+  const [isEditing, setIsEditing] = useState(false);
 
-    const [isEditing, setIsEditing] = useState(false);
-    const [updatedUser, setUpdatedUser] = useState({ ...user });
-    const [error, setError] = useState('');
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
 
-    const handleEdit = () => {
-        setIsEditing(true);
-    };
+  // Update user state after saving changes
+  const handleUpdate = (updatedUser) => {
+    setUser(updatedUser);
+  };
 
-    const handleCancel = () => {
-        setIsEditing(false);
-        setUpdatedUser({ ...user });
-        setError('');
-    };
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      {/* Cover Section */}
+      <div className="relative bg-blue-600 text-white py-10 rounded-xl text-center shadow-lg">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Welcome, {user.name || "User"}! 🎉</h1>
+      </div>
 
-    const handleSave = () => {
-        if (!updatedUser.name || !updatedUser.email || !updatedUser.picture) {
-            setError('All fields are required!');
-            return;
-        }
-        setUser({ ...updatedUser });
-        setIsEditing(false);
-        setError('');
-    };
+      {/* User Info Card */}
+      <div className="bg-white shadow-md rounded-xl p-6 mt-6 flex flex-col items-center w-full max-w-lg mx-auto">
+        <img
+          src={user.photoURL || "https://via.placeholder.com/100"}
+          alt="User"
+          className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-blue-500"
+        />
+        <h2 className="text-lg sm:text-xl font-semibold mt-3">{user.name || "N/A"}</h2>
+        <p className="text-gray-600 text-sm sm:text-base">{user.email || "sr0589071@gmail.com"}</p>
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setUpdatedUser((prev) => ({ ...prev, [name]: value }));
-    };
+        {/* Update Profile Button */}
+        <button 
+          onClick={() => setIsEditing(true)} 
+          className="bg-blue-500 hover:bg-blue-600 transition text-white px-4 py-2 rounded-lg mt-4"
+        >
+          Update Profile
+        </button>
+      </div>
 
-    return (
-        <div className="bg-gray-100 flex flex-col items-center py-8 px-4 md:px-8">
-      
-            <div className="w-full bg-blue-600 text-white py-8 rounded-lg text-center mb-8">
-                <h1 className="text-2xl md:text-3xl font-bold">Welcome, {user.name}!</h1>
-            </div>
-
-          
-            <div className="bg-white shadow-lg rounded-lg p-6  w-full">
-                <div className="flex flex-col items-center space-y-4">
-                    <img
-                        src={user.picture}
-                        alt={user.name}
-                        className="w-32 h-32 rounded-full shadow-lg"
-                    />
-                    {!isEditing ? (
-                        <>
-                            <h2 className="text-xl font-bold">{user.name}</h2>
-                            <p className="text-gray-600">{user.email}</p>
-                            <button
-                                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                                onClick={handleEdit}
-                            >
-                                Edit Profile
-                            </button>
-                        </>
-                    ) : (
-                        <>
-                            <div className="w-full">
-                                <label className="block text-gray-700">Name</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={updatedUser.name}
-                                    onChange={handleChange}
-                                    className="w-full border rounded px-3 py-2"
-                                />
-                            </div>
-                            <div className="w-full">
-                                <label className="block text-gray-700">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={updatedUser.email}
-                                    onChange={handleChange}
-                                    className="w-full border rounded px-3 py-2"
-                                />
-                            </div>
-                            <div className="w-full">
-                                <label className="block text-gray-700">Profile Picture URL</label>
-                                <input
-                                    type="text"
-                                    name="picture"
-                                    value={updatedUser.picture}
-                                    onChange={handleChange}
-                                    className="w-full border rounded px-3 py-2"
-                                />
-                            </div>
-                            {error && <p className="text-red-500 mt-2">{error}</p>}
-                            <div className="flex space-x-4 mt-4">
-                                <button
-                                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-                                    onClick={handleSave}
-                                >
-                                    Save
-                                </button>
-                                <button
-                                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-                                    onClick={handleCancel}
-                                >
-                                    Cancel
-                                </button>
-                            </div>
-                        </>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
+      {/* Update Profile Modal */}
+      {isEditing && <UpdateProfile onClose={() => setIsEditing(false)} onUpdate={handleUpdate} />}
+    </div>
+  );
 };
 
 export default MyProfile;

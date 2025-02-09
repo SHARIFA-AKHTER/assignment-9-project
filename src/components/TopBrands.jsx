@@ -1,18 +1,22 @@
-
+import React, { useState, useEffect } from 'react';
 import Marquee from 'react-fast-marquee';
 import { useNavigate } from 'react-router-dom';
 
-const brands = [
-    { id: 1, name: 'Sailor', logo: 'https://i.ibb.co/MsJDXSJ/logo-sailor.png' },
-    { id: 2, name: 'Aarong', logo: 'https://i.ibb.co/q1fzwD8/Arong-logo.jpg' },
-    { id: 3, name: "Anjan’s", logo: 'https://i.ibb.co/PmXC9Lg/Anjans-logo.jpg' },
-    { id: 4, name: 'Kay Kraft', logo: 'https://i.ibb.co/gPD7wSz/keykraft-logo.png' },
-    { id: 5, name: 'Yellow', logo: 'https://i.ibb.co/T13dS7R/yellow-logo.png' },
-    { id: 6, name: 'Infinity Mega Mall', logo: 'https://i.ibb.co/7khQQZr/infinity-logo.jpg' },
-];
-
 const TopBrands = () => {
+    const [brands, setBrands] = useState([]);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        // Fetch data from your API or use static data
+        fetch('/cupons.json')
+            .then((response) => response.json())
+            .then((data) => {
+                setBrands(data);
+            })
+            .catch((error) => {
+                console.error('Error fetching brands:', error);
+            });
+    }, []);
 
     const handleClick = (brandId) => {
         navigate(`/brand/${brandId}`);
@@ -30,17 +34,17 @@ const TopBrands = () => {
             >
                 {brands.map((brand) => (
                     <div
-                        key={brand.id}
-                        className="flex-shrink-0 mx-4 cursor-pointer hover:scale-110 transition-transform duration-300"
-                        onClick={() => handleClick(brand.id)}
+                        key={brand._id}
+                        className="flex-shrink-0 mx-4 cursor-pointer transform hover:scale-110 hover:bg-gray-100 hover:shadow-lg transition-all duration-300"
+                        onClick={() => handleClick(brand._id)}
                     >
                         <img
-                            src={brand.logo}
-                            alt={brand.name}
+                            src={brand.brand_logo}
+                            alt={brand.brand_name}
                             className="h-16 md:h-20 lg:h-24 w-auto"
                         />
                         <p className="text-center mt-2 text-sm md:text-base lg:text-lg">
-                            {brand.name}
+                            {brand.brand_name}
                         </p>
                     </div>
                 ))}
