@@ -3,6 +3,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import { FaShoppingBag } from "react-icons/fa";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -15,8 +16,10 @@ const Header = () => {
     return (
         <header className="bg-gray-800 text-white py-4 px-6 md:px-10 flex justify-between items-center fixed top-0 w-full z-50">
             {/* Logo */}
-            <div>
-                <Link to="/" className="text-2xl font-bold">
+            <div className="flex items-center  gap-4 ">
+                <Link to="/" className="text-2xl font-bold flex items-center ">
+                <FaShoppingBag className="h-10 w-10 sm:h-8 sm:w-8 md:h-8 md:w-8 lg:h-10 mr-1
+                 lg:w-10 text-green-500 transition-transform duration-300 hover:scale-110" />
                     DISCOUNT PRO
                 </Link>
             </div>
@@ -69,13 +72,15 @@ const Header = () => {
                         <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                             <Link
                                 to="/auth/login"
-                                className="bg-blue-600 text-sm md:text-base px-4 py-2 w-full md:w-auto text-center rounded hover:bg-blue-700 transition duration-300"
+                                className="bg-blue-500/30 backdrop-blur-md text-white text-sm md:text-base px-5 py-2 w-full md:w-auto text-center rounded-lg border border-blue-300
+                                 hover:bg-blue-500/50 hover:border-blue-400 transition-all duration-300"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/auth/register"
-                                className="bg-green-600 text-sm md:text-base px-4 py-2 w-full md:w-auto text-center rounded hover:bg-green-700 transition duration-300"
+                                className="bg-green-500/30 backdrop-blur-md text-white text-sm md:text-base px-5 py-2 w-full md:w-auto text-center rounded-lg border border-green-300
+                                 hover:bg-green-500/50 hover:border-green-400 transition-all duration-300"
                             >
                                 Register
                             </Link>
