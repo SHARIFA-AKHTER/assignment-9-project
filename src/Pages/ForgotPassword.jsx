@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const [email, setEmail] = useState(location.state?.email || ''); 
+    const [email, setEmail] = useState('');
+
+    useEffect(() => {
+        if (location.state?.email) {
+            setEmail(location.state.email);
+        }
+    }, [location.state]);
 
     const handleResetPassword = () => {
-    
         window.open('https://mail.google.com', '_blank');
         navigate('/auth/login'); 
     };

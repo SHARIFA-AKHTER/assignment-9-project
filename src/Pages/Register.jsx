@@ -3,7 +3,7 @@ import { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS CSS
+import 'aos/dist/aos.css'; 
 
 const Register = () => {
 
@@ -12,7 +12,7 @@ const Register = () => {
   const [error, setError] = useState({});
 
   useEffect(() => {
-    AOS.init(); // Initialize AOS
+    AOS.init(); 
   }, []);
 
   const handleSubmit = (e) => {
