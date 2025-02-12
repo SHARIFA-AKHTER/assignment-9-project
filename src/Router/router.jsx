@@ -11,7 +11,8 @@ import AuthLayout from "../Layout/AuthLayout";
 import ForgotPassword from "../Pages/ForgotPassword";
 import Home from "../components/Home";
 import PrivateRoute from "./PrivateRoute";
-import CouponPage from "../components/CouponPage";
+import BrandDetails from "../components/BrandDetail";
+
 
 const router = createBrowserRouter([
     {
@@ -27,13 +28,13 @@ const router = createBrowserRouter([
             element: <Brands></Brands>,
         },
         {
-            path: "/brand/:id",
-            element: <PrivateRoute><CouponPage></CouponPage></PrivateRoute>,
+            path:"/brand/:brandId",
+            element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
         },
       
         {
             path:"/my-profile",
-            element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>,
+            element:<PrivateRoute> <MyProfile></MyProfile></PrivateRoute>,
         },
     
         {

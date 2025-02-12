@@ -21,10 +21,10 @@ const Brands = ({ limit }) => {
   const isLoggedIn = localStorage.getItem("user");
 
   const handleCouponClick = (brandId) => {
-    if (isLoggedIn) {
-      navigate(`/brand/${brandId}`); 
+    if (!isLoggedIn) {
+      navigate("/auth/login", { state: { from: `/brand/${brandId}` } });
     } else {
-      navigate("/login"); 
+      navigate(`/brand/${brandId}`);
     }
   };
 
@@ -54,13 +54,11 @@ const Brands = ({ limit }) => {
             <h3 className="text-xl font-semibold">{brand.brand_name}</h3>
             <p className="text-gray-600 text-sm">{brand.description}</p>
             <div className="flex items-center mt-2 text-yellow-500">⭐ {brand.rating}</div>
-
             {brand.isSaleOn && (
               <p className="text-red-500 animate-bounce text-sm font-semibold mt-2">
                 Sale is on!
               </p>
             )}
-
             <button
               onClick={() => handleCouponClick(brand._id)}
               className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-3"
